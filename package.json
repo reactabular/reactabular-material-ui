@@ -42,8 +42,8 @@
     "test:watch": "jest --watch --",
     "dist:build": "rimraf ./dist && babel ./src --out-dir ./dist",
     "preversion": "npm run test:all && npm run dist:build && git commit --allow-empty -am \"Update dist\"",
-    "prepublish": "project-defaults -t react",
     "postpublish": "npm run gh-pages:build && npm run gh-pages:deploy",
+    "prepublish": "project-defaults -t react",
     "start": "styleguidist server",
     "gh-pages:build": "styleguidist build",
     "gh-pages:deploy": "gh-pages -d styleguide"
