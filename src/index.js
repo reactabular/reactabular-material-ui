@@ -2,22 +2,27 @@ import React from 'react';
 import {
   Table,
   TableBody,
-  TableHeader,
   TableHeaderColumn,
   TableRow,
   TableRowColumn
 } from 'material-ui/Table';
 
-const tableHeaderWrapper = ({children}) => (
+const tableHeaderWrapper = ({ children }) => (
   <Table>
     <TableBody>{children}</TableBody>
   </Table>
 );
-const tableBodyWrapper = ({children}) => (
+tableHeaderWrapper.propTypes = {
+  children: React.PropTypes.any
+};
+const tableBodyWrapper = ({ children }) => (
   <Table>
     <TableBody displayRowCheckbox={false}>{children}</TableBody>
   </Table>
 );
+tableBodyWrapper.propTypes = {
+  children: React.PropTypes.any
+};
 
 const materialTableComponents = {
   table: 'div',
