@@ -6,8 +6,40 @@ TODO
 
 ## Example
 
-```
-TODO
+```jsx
+/*
+import * as Table from 'reactabular-table';
+import components from 'reactabular-material-ui';
+*/
+
+const rows = [
+  {
+    id: 100,
+    name: 'John'
+  },
+  {
+    id: 101,
+    name: 'Jack'
+  }
+];
+
+const columns = [
+  {
+    property: 'name',
+    header: {
+      label: 'Name'
+    }
+  }
+];
+
+<Table.Provider
+  columns={columns}
+  components={components}
+>
+  <Table.Header />
+
+  <Table.Body rows={rows} rowKey="id" />
+</Table.Provider>
 ```
 
 ## License
